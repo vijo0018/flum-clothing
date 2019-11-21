@@ -29,7 +29,7 @@ const Directory = () => {
           id: 4,
           linkUrl: 'shop/womens'
         },
-        {
+        { 
           title: 'mens',
           imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
           size: 'large',
@@ -40,19 +40,10 @@ const Directory = () => {
 
       return(
         <div className='directory-menu'>
-            {sections.map(({title, imageUrl, id, size}) => (
-                <MenuItem key={id} title={title} imageUrl={imageUrl} size={size}/>
+            {sections.map(({id, ...otherSectionProps}) => (
+                <MenuItem key={id} {...otherSectionProps}/>
             ))}
         </div>
       )
 }
 export default Directory;
-
-
-// class Directory extends React.Component {
-//     constructor(){
-//         super();
-
-//         this.state
-//     }
-// }
