@@ -27,7 +27,7 @@ const App = () => {
           });
         });
       }
-      setCurrentUser({currentUser: userAuth});
+      setCurrentUser(userAuth);
     });
     return () => {
       unsubscribeFromAuth();
